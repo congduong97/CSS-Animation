@@ -1,0 +1,56 @@
+header{
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+  }
+  header:after{
+    display: block;
+    content: "";
+    clear: both;
+  }
+  .basket ul{
+    padding: 0;
+    margin-top: 40px;
+  }
+  .basket li{
+    display: inline-block;
+    list-style-type: none;
+    width: 29.5%;
+    margin: 30px 1.5%;
+    text-align: center;
+    border: 1px solid #eee;
+   
+  }
+  .basket button{
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    background: brown;
+    margin-bottom: 10px; 
+  }
+  .basket header div{
+    float: right;
+    position: relative;
+    z-index: 1;
+  }
+  .basket header h1{
+    float: left;
+  }
+  
+  /*// BASKET ANIMATION STYLES //*/
+
+  .zoom{
+      position: absolute;
+      top: 40px;
+      right: 50%;
+      width: 50px;
+      opacity: 0;
+      animation: zoom 1s ease forwards;
+  }
+  
+  @keyframes zoom{
+      0%{opacity: 0}
+      50%{opacity: 1;}
+      100%{opacity: 0; right: 40px;}
+  }

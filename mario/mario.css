@@ -1,0 +1,121 @@
+html, body{
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .grass, .sky, .road{
+    position: relative;
+  }
+  
+  .sky{
+      margin-top: 0px;
+    height: 40%;
+    background: skyblue;
+    
+  }
+  
+  .grass{
+    height: 30%;
+    background: seagreen;
+  }
+  
+  .road{
+    height: 30%;
+    background: dimgrey;
+    box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width: 100%;
+  }
+  
+  .lines{
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 52%;
+  }
+  
+  /* start code animation */
+
+  .mario{
+      position: absolute;
+      top: -40px;
+      left: 0px;
+      animation: drive 10s both infinite linear,
+                 jump 0.3s 4s  ease ;
+  }
+
+  .luigi{
+      position: absolute;
+      top: 55px;
+      left: 0px;
+      animation-name: drive;
+      animation-duration: 12s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+
+  }
+
+  .cloud{
+      position: absolute;
+  }
+  .cloud:nth-child(1){
+      width: 250px;
+      top: 110px;
+      opacity: 0.5;
+      animation: wind 50s linear infinite ;
+  }
+
+  .cloud:nth-child(2){
+      width: 300px;
+      top: 0;
+      animation: wind 30s linear infinite ;
+  }
+  .sun{ 
+      display: block;
+      margin: 0 auto;
+      animation-name: shine;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-direction: alternate-reverse;
+  }
+  .plane{
+      position: absolute;
+      top: -1px;
+      width: 86px;
+      animation-name: fly;
+      animation-duration: 50s; 
+      animation-iteration-count: infinite;
+
+  }
+
+  @keyframes drive{
+    from{ transform: translateX(-200px)}
+    to{ transform: translateX(1400px)}
+  }
+
+  @keyframes jump{
+      0%{top: -40px}
+      50%{top: -100px}
+      100%{top: -40px}
+  }
+
+  @keyframes wind{
+      from{left: -400px;}
+      to{left: 100%;}
+  }
+  @keyframes shine{
+      from{transform: rotateZ(0deg)}
+      to{transform: rotateZ(360deg)}
+  }
+  
+  @keyframes fly{
+      from{left: -00px}
+      to{left: 1400px}
+  }

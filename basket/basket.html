@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Created by toluenn</title>
+    <link rel="stylesheet" href="basket.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body class="basket">
+    <!-- This is header -->
+    <header>
+        <h1>Sports Clothing</h1>
+        <div class="basket-icon">
+            <img src="basket.png" alt="basket">
+        </div>
+    </header>
+    <!-- List product -->
+    <ul class="products">
+        <li>
+            <img src="t-1.jpg" alt="t1">
+            <h2>Green T-Shirt</h2>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="t-2.jpg" alt="t2">
+            <h2>Yellow T-Shirt</h2>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="t-3.jpg" alt="t3">
+            <h2>Pink T-Shirt</h2>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="t-1.jpg" alt="t1">
+            <h2>Green T-Shirt</h2>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="t-2.jpg" alt="t2">
+            <h2>Yellow T-Shirt</h2>
+            <button>Add to Basket</button>
+        </li>
+        <li>
+            <img src="t-3.jpg" alt="t3">
+            <h2>Pink T-Shirt</h2>
+            <button>Add to Basket</button>
+        </li>
+    </ul>
+    <script>
+        $("button").on("click", function(){
+            $(this).closest("li")
+            .find("img")
+            .clone()
+            .addClass("zoom")
+            .appendTo("body");
+            setTimeout(function(){
+                $("zoom").remove();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
